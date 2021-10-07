@@ -1,0 +1,38 @@
+{
+  "name": "budget-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "prestart": "npm run webpack",
+    "lite-server": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+  },
+  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "lite-server": "^2.5.3",
+    "mongoose": "^5.5.15",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.57.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-pwa-manifest": "^4.3.0"
+  }
+}
