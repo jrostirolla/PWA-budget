@@ -4,11 +4,13 @@ const path = require("path");
 const config = {
     mode: "production",
     entry: {
-        index: "./public/index.js",
+        index: "/public/index.js",
+        db: "/public/db.js"
     },
     output: {
-        path: __dirname = "/public/dist",
-        filename: "[name].bundle.js"
+        path: __dirname + "/public/dist",
+        filename: "[name].bundle.js",
+        publicPath: '',
     },
     plugins: [
         new WebpackPwaManifest({
@@ -29,7 +31,7 @@ const config = {
                 {
                     src: path.resolve("public/icons/icon-192x192.png"),
                     size: [192, 512],
-                    // destination: path.join("icons")
+                    destination: path.join("icons")
                 }]
         })
     ],

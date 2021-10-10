@@ -1,22 +1,25 @@
 const FILES_TO_CACHE = [
-    '/',
-    "/index",
-    "/manifest.json",
-    "/style.css",
-    '/dist/index.bundle.js',
+    "/",
+    "/index.js",
+    "/dist/manifest.json",
+    "/styles.css",
+    "/dist/index.bundle.js",
+    "/dist/db.bundle.js",
     "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
-    '/icons/icon-192x192.png',
-    '/icons/icon-512x512.png',
+    "/icons/icon-192x192.png",
+    "/icons/icon-512x512.png",
 ];
 
 const STATIC_CACHE = "static-cache-v1";
 const RUNTIME_CACHE = "runtime-cache";
 
+
+
 self.addEventListener("install", event => {
     event.waitUntil(
         caches
         .open(STATIC_CACHE)
-        .then(cache => cahce.addAll(FILES_TO_CACHE))
+        .then(cache => cache.addAll(FILES_TO_CACHE))
         .then(() => self.skipWaiting())
     );
 });
@@ -29,7 +32,7 @@ self.addEventListener("activate", event => {
         .then(cacheNames => {
             return cacheNames => {
                 return cacheNames.filter(
-                    cacheName => !currentCaches.includes(cacheName)
+                    cacheName => !currentCaches.includes(cacheNames)
                 )}
         })
         .then(cachesToDelete => {
@@ -83,3 +86,4 @@ self.addEventListener("fetch", event => {
         })
     );
 });
+
