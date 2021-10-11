@@ -2,9 +2,8 @@ const FILES_TO_CACHE = [
     "/",
     "/index.js",
     "/dist/manifest.json",
-    "/styles.css",
     "/dist/index.bundle.js",
-    "/dist/db.bundle.js",
+    "/styles.css",
     "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
     "/icons/icon-192x192.png",
     "/icons/icon-512x512.png",
@@ -86,4 +85,3 @@ self.addEventListener("fetch", event => {
         })
     );
 });
-
