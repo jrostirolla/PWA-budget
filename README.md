@@ -3,6 +3,8 @@
 ## Intro
 Hi there, and welcome to my example exercise for website download and offline functionality. With this app, you will be able to download the webpage directly to your desktop, as well as interact with the database information offline and seemlessly reconnecting once you're back online.
 
+![screenshot](https://github.com/jrostirolla/PWA-budget/blob/main/screenshot.jpg?raw=true)
+
 ## Technologies
 This application uses technologies such as:
 * MongoDB
